@@ -6,15 +6,15 @@ class Ad(db.Model):
     settlement = db.Column(db.String(50))
     under_construction = db.Column(db.Boolean)
     description = db.Column(db.Text)
-    price = db.Column(db.Integer)
-    oblast_district = db.Column(db.String(50))
+    price = db.Column(db.Integer, index=True)
+    oblast_district = db.Column(db.String(50), index=True)
     living_area = db.Column(db.Float)
     has_balcony = db.Column(db.Boolean)
     address = db.Column(db.String(255))
-    construction_year = db.Column(db.Integer)
+    construction_year = db.Column(db.Integer, index=True)
     rooms_number = db.Column(db.Integer)
     premise_area = db.Column(db.Float)
-    active = db.Column(db.Boolean)
+    active = db.Column(db.Boolean, index=True)
 
     def __init__(
                 self,
