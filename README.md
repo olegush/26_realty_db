@@ -14,17 +14,31 @@ source virtualenv_folder_name/bin/activate
 python3.6 -m pip install -r requirements.txt
 ```
 
-Put host, port and debug mode to .env file.
+Put host, port, debug mode and path to database to .env file.
 
 ```bash
 HOST=127.0.0.1
 PORT=5000
 FLASK_DEBUG=TRUE
+DB=PATH_TO_DB_WITH_ENGINE
 ```
 
 FLASK_DEBUG environment variable Flask loads by itself, but for PORT loading we should use python-dotenv package.
 
-To create new database and export data from json, run **export_db.py**.
+To create new database launch interactive Python shell
+
+```bash
+python3
+```
+
+and run:
+
+```python
+from app import db
+db.create_all()
+```
+
+Database will be created in the **db** dir. Then, export data from **ads.json** with run **export.py**. If you do it with clean database, all entries from json will be inserted. Further export (after adding or deleting or changing entries in your json file) merges new data and existing database (inserts or hides or updates entries respectively).
 
 
 # Quickstart

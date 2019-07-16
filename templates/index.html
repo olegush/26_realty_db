@@ -1,0 +1,29 @@
+{% extends "_layout.html" %}
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-sm-4">
+          {% include "_form.html" %}
+        </div>
+        <div class="col-sm-8">
+          <p>Найдено объявлений: {{ ads.total }}</p>
+          <div class="panel panel-default">
+            {% include "_content.html" %}
+            <div class="panel-body">
+              <div class="clearfix">
+                {% if ads.total == 0 %}
+                  <p>Попробуйте расширить критерии поиска</p>
+                {% else %}
+                  {% include "_pagination.html" %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /.container -->
+{% endblock %}

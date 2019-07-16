@@ -1,22 +1,20 @@
-from sqlalchemy import Column, Integer, String, Boolean, Text, Float
-from db.database import Base
+from app import db
 
 
-class Ad(Base):
-    __tablename__ = 'ads'
-    id = Column(Integer, primary_key=True)
-    settlement = Column(String(50))
-    under_construction = Column(Boolean)
-    description = Column(Text)
-    price = Column(Integer)
-    oblast_district = Column(String(50))
-    living_area = Column(Float)
-    has_balcony = Column(Boolean)
-    address = Column(String(255))
-    construction_year = Column(Integer)
-    rooms_number = Column(Integer)
-    premise_area = Column(Float)
-    active = Column(Boolean)
+class Ad(db.Model):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    settlement = db.Column(db.String(50))
+    under_construction = db.Column(db.Boolean)
+    description = db.Column(db.Text)
+    price = db.Column(db.Integer)
+    oblast_district = db.Column(db.String(50))
+    living_area = db.Column(db.Float)
+    has_balcony = db.Column(db.Boolean)
+    address = db.Column(db.String(255))
+    construction_year = db.Column(db.Integer)
+    rooms_number = db.Column(db.Integer)
+    premise_area = db.Column(db.Float)
+    active = db.Column(db.Boolean)
 
     def __init__(
                 self,
@@ -32,7 +30,7 @@ class Ad(Base):
                 construction_year=0,
                 rooms_number=0,
                 premise_area=0,
-                active=False):
+                active=True):
         self.id = id
         self.settlement = settlement
         self.under_construction = under_construction
@@ -45,7 +43,7 @@ class Ad(Base):
         self.construction_year = construction_year
         self.rooms_number = rooms_number
         self.premise_area = premise_area
-        self.active = True
+        self.active = active
 
     def __repr__(self):
         return '<Ad %r (%r)>' % (self.id, self.settlement)

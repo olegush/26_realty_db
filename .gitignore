@@ -24,6 +24,7 @@ var/
 .installed.cfg
 *.egg
 .env
+db/realty_db.db
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -57,4 +58,5 @@ docs/_build/
 
 # PyBuilder
 target/
+
 info

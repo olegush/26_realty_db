@@ -1,0 +1,21 @@
+{% extends "_layout.html" %}
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-sm-4">
+          {% include "_form.html" %}
+        </div>
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              404 error: cтраница не найдена
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /.container -->
+{% endblock %}

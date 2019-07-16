@@ -1,0 +1,23 @@
+<ul class="pagination pull-right">
+  {% if ads.has_prev %}
+    <li><a href="?{{ params }}&current_page={{ ads.prev_num }}" role="next">«</a></li>
+  {% else %}
+    <li class="disabled"><span>«</span></li>
+  {% endif%}
+  {% for page in ads.iter_pages(left_edge=2, left_current=1, right_current=1, right_edge=2) %}
+    {% if page %}
+      {% if page == ads.page %}
+        <li class="active"><span>{{ page }}</span></li>
+      {% else %}
+        <li><a href="?{{ params }}&current_page={{ page }}">{{ page }}</a></li>
+      {% endif %}
+    {% else %}
+      <li ><span>...</span></li>
+    {% endif %}
+  {% endfor %}
+  {% if ads.has_next %}
+    <li><a href="?{{ params }}&current_page={{ ads.next_num }}" role="next">»</a></li>
+  {% else %}
+    <li class="disabled"><span>»</span></li>
+  {% endif%}
+</ul>

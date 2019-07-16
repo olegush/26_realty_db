@@ -1,0 +1,46 @@
+{% for ad in ads.items %}
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <div>
+          <div class="row">
+            <div class="col-sm-7">
+              <p><strong>{{ ad.rooms_number }}-комнатная квартира</strong></p>
+            </div>
+            <div class="col-sm-5">
+              <p class="text-right"><strong class="nowrap">{{ ad.price }} р.</strong></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>{{ ad.settlement }}, {{ ad.address }}</p>
+              <p>{{ ad.description }}</p>
+              {% if ad.construction_year %}
+              <p>Год постройки: {{ ad.construction_year }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <span class="label label-success">комнат: {{ ad.rooms_number }}</span>
+          <span class="label label-primary">
+          {% if ad.living_area %}
+            {{ ad.living_area }} /
+          {% endif %}
+          {{ ad.premise_area }} кв.м.</span>
+          <span class="label label-info">балкон:
+            {% if ad.has_balcony %}
+              есть
+            {% else %}
+              нет
+            {% endif %}
+          </span>
+        </p>
+        <p>id: {{ ad.id }}</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+{% endfor %}
