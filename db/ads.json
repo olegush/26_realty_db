@@ -434,20 +434,6 @@
     "id": 20247
   },
   {
-    "settlement": "Вологда",
-    "under_construction": false,
-    "description": "Лоджия 6 кв.м., застеклена стеклопакетами. С\\у раздельный, большая прихожая, просторная кухня. Во дворе детская площадка, часть окон выходят на реку. Комнаты все изолированные, почти во всех комнатах стоят стеклопакеты, косметический ремонт.",
-    "price": 4850000,
-    "oblast_district": "Вологодский район",
-    "living_area": null,
-    "has_balcony": true,
-    "address": "Советский",
-    "construction_year": null,
-    "rooms_number": 4,
-    "premise_area": 80.0,
-    "id": 44300
-  },
-  {
     "settlement": "с. Шебеньгский Погост",
     "under_construction": false,
     "description": "Паровое отопление. Возможна продажа за материнский капитал.",
@@ -502,20 +488,6 @@
     "rooms_number": 1,
     "premise_area": 30.0,
     "id": 33299
-  },
-  {
-    "settlement": "Вологда",
-    "under_construction": false,
-    "description": "Продается квартира в деревянном доме. Ванна - 7 кв.м. Санузел раздельный. Цена договорная. Торг до 200 000 рублей. Все вопросы по телефону.",
-    "price": 2000000,
-    "oblast_district": "Вологодский район",
-    "living_area": 48.0,
-    "has_balcony": false,
-    "address": "Разина",
-    "construction_year": null,
-    "rooms_number": 3,
-    "premise_area": 77.0,
-    "id": 45667
   },
   {
     "settlement": "Вологда",

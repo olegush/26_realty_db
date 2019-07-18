@@ -9,9 +9,9 @@ from flask import Flask, render_template, request, send_from_directory, abort
 from flask_sqlalchemy import SQLAlchemy
 
 load_dotenv()
-
+DB_PATH = os.environ.get('DB_PATH')
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB')
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_PATH}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 

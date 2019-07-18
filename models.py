@@ -46,4 +46,5 @@ class Ad(db.Model):
         self.active = active
 
     def __repr__(self):
-        return '<Ad %r (%r)>' % (self.id, self.settlement)
+        #return '<Ad %r (%r)>' % (self.id, self.settlement)
+        return '%r' % (self.id)

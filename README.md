@@ -20,7 +20,7 @@ Put host, port, debug mode and path to database to .env file.
 HOST=127.0.0.1
 PORT=5000
 FLASK_DEBUG=TRUE
-DB=PATH_TO_DB_WITH_ENGINE
+DB_FILE=DB_FILE
 ```
 
 FLASK_DEBUG environment variable Flask loads by itself, but for PORT loading we should use python-dotenv package.
@@ -38,7 +38,7 @@ from app import db
 db.create_all()
 ```
 
-Database will be created in the **db** dir. Then, export data from **ads.json** with run **export.py**. If you do it with clean database, all entries from json will be inserted. Further export (after adding or deleting or changing entries in your json file) merges new data and existing database (inserts or hides or updates entries respectively).
+Database will be created in the **db** dir. Then, export data from **ads.json** with run **import.py**. If you do it with clean database, all entries from json will be inserted. Further export (after adding or deleting or changing entries in your json file) merges new data and existing database (inserts or hides or updates entries respectively).
 
 
 # Quickstart
