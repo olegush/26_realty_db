@@ -38,7 +38,7 @@ from app import db
 db.create_all()
 ```
 
-Database will be created in the **db** dir. Then, export data from **ads.json** with run **import.py**. If you do it with clean database, all entries from json will be inserted. Further export (after adding or deleting or changing entries in your json file) merges new data and existing database (inserts or hides or updates entries respectively).
+Then, import data from **ads.json** with run **import.py**. If you do it with clean database, all entries from json will be inserted. Further export (after adding or deleting or changing entries in your json file) merges new data and existing database (inserts or hides or updates entries respectively). Every import does activate backup process as well.
 
 
 # Quickstart
